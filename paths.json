@@ -1,7 +1,15 @@
 {
   "mappings": [
-    "/content/aem-block-collection/:/",
-    "/content/aem-block-collection/metadata:/metadata.json",
-    "/content/aem-block-collection/configuration:/.helix/config.json"
+    "/content/best-buy-eds/:/",
+    "/content/best-buy-eds/metadata:/metadata.json",
+    "/content/best-buy-eds/configuration:/.helix/placeholders.json",
+    "/content/dam/best-buy-eds/:/"
+  ],
+  "includes": [
+    "/content/best-buy-eds/**",
+    "/content/dam/best-buy-eds/**"
+  ],
+  "excludes": [
+    "/content/best-buy-eds/**/drafts/**"
   ]
 }
