@@ -1,0 +1,109 @@
+/* cards-offer — "Featured deals" promotional offer tiles
+ * Design migrated from bestbuy.com/top-deals (values from source computed styles).
+ * Each tile: diagonal blue->teal gradient, white text, rounded corners, white "Shop now" pill.
+ */
+
+.cards-offer > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;      /* mobile: single column, tiles stack */
+  gap: 16px;                       /* source gap-200 */
+}
+
+.cards-offer > ul > li {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;                        /* source gap-100 between content blocks */
+  border-radius: 8px;              /* source rounded-lg */
+  padding: 16px;                   /* source p-200 */
+  overflow: hidden;
+  color: #fbfbfb;                  /* source text-default-inverse rgb(251,251,251) */
+
+  /* diagonal gradient sampled from source bg image:
+     left #003baf -> mid #015bb3 -> right #01beba */
+  background-image: linear-gradient(100deg, #003baf 0%, #015bb3 45%, #01beba 100%);
+}
+
+/* image cell (picture only) */
+.cards-offer .cards-offer-card-image {
+  line-height: 0;
+}
+
+.cards-offer .cards-offer-card-image picture,
+.cards-offer .cards-offer-card-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* text cell — grows to fill so CTA can pin to the bottom for equal-height cards */
+.cards-offer .cards-offer-card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* offer headline (EDS h3) */
+.cards-offer .cards-offer-card-body h3 {
+  margin: 0;
+  font-family: var(--heading-font-family);
+  font-size: 28px;                 /* source offerHeadline */
+  font-weight: 500;
+  line-height: 28px;
+  color: #fbfbfb;
+}
+
+.cards-offer .cards-offer-card-body h3 strong {
+  font-size: 48px;                 /* source emphasized price/value */
+  font-weight: 700;
+  line-height: 48px;
+}
+
+/* body copy (EDS p) */
+.cards-offer .cards-offer-card-body p {
+  margin: 0;
+  font-size: 13px;                 /* source bodyCopyContainer */
+  font-weight: 400;
+  line-height: 1.2;
+  color: #fbfbfb;
+}
+
+/* white "Shop now" pill CTA — pinned to bottom of the card */
+.cards-offer .cards-offer-card-body p.button-container {
+  margin-top: auto;                /* push CTA to bottom (source justify-between) */
+}
+
+main .cards-offer a.button:any-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 32px;                /* source button height */
+  margin: 0;
+  padding: 4px 16px;               /* source */
+  border: 1px solid #c4c8cf;       /* source rgb(196,200,207) */
+  border-radius: 8px;              /* source rounded button */
+  background-color: #fff;
+  color: #0457c8;                  /* source blue text rgb(4,87,200) */
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+main .cards-offer a.button:hover,
+main .cards-offer a.button:focus {
+  background-color: #f0f2f4;        /* subtle grey hover on white pill */
+  color: #00308a;                   /* darker brand blue */
+}
+
+/* desktop: 4-across equal-height grid */
+@media (width >= 900px) {
+  .cards-offer > ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "variantName": "hero-sponsored",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2026-08-20T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.bestbuy.com/top-deals",
+    "originPage": "Best Buy Top Deals landing page",
+    "blockPosition": "bottom"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "sponsored-banner",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "full-width sponsored banner image + link + 'Sponsored' label",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "sponsored / display-ad banner slots",
+      "single full-width promotional banner image with a click-through link",
+      "partner / advertiser creative placements labeled 'Sponsored'"
+    ],
+    "notSuitableFor": [
+      "editorial hero banners with rich headline copy",
+      "repeating card grids"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/top-deals"],
+    "reuseCount": 1,
+    "lastUsed": "2026-08-20T00:00:00.000Z"
+  }
+}

@@ -1,0 +1,45 @@
+/* hero-sponsored — sponsored display-ad (leaderboard) banner
+ * Source: https://www.bestbuy.com/top-deals
+ *   .display-ad-wrapper:has(.custom-leaderboard)
+ * The leaderboard container is 970px wide and centered. The ad creative sits
+ * in a subtly bordered slot with a small, muted, right-aligned "Sponsored"
+ * caption beneath it. Values below are extracted from source computed styles.
+ */
+
+/* Leaderboard width, centered (source wrapper width: 970px) */
+.hero-sponsored {
+  max-width: 970px;
+  margin-inline: auto;
+}
+
+/* Rows / cells carry no extra chrome — stack cleanly */
+.hero-sponsored > div,
+.hero-sponsored > div > div {
+  margin: 0;
+  padding: 0;
+}
+
+/* Ad creative (banner image), when present — subtle border matches the
+ * source ad slot (.inner-container border: 1px solid rgb(228, 229, 232)) */
+.hero-sponsored picture {
+  display: block;
+}
+
+.hero-sponsored img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid rgb(228 229 232);
+  box-sizing: border-box;
+}
+
+/* "Sponsored" caption — small, muted grey, right-aligned
+ * (source .ad-text: 10px / 400 / line-height 12px / rgb(112, 117, 125)) */
+.hero-sponsored p {
+  margin: 4px 0 0;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  color: rgb(112 117 125);
+  text-align: right;
+}

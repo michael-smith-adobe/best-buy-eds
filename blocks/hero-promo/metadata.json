@@ -1,0 +1,38 @@
+{
+  "variantName": "hero-promo",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2026-08-20T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.bestbuy.com/top-deals",
+    "originPage": "Best Buy Top Deals landing page",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "accent",
+    "density": "spacious",
+    "purpose": "promo-hero",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "background image + headline + subheading + disclaimer",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "promotional sale banners",
+      "campaign landing hero banners with gradient/photo backgrounds",
+      "full-width marketing banners with headline + supporting copy"
+    ],
+    "notSuitableFor": [
+      "plain text page-title headings",
+      "product cards or repeating item grids"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/top-deals"],
+    "reuseCount": 1,
+    "lastUsed": "2026-08-20T00:00:00.000Z"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "variantName": "cards-product",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-08-20T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.bestbuy.com/top-deals",
+    "originPage": "Best Buy Top Deals landing page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "product-deal",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "repeating cards: % off badge + product image + linked title + deal price (was price) + availability",
+    "buttonCount": 16,
+    "imageCount": 16
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "product deal cards with price and discount badge",
+      "e-commerce product grids / product carousels",
+      "shop listings with title + price + CTA"
+    ],
+    "notSuitableFor": [
+      "category navigation icon tiles",
+      "large promotional offer tiles"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/top-deals"],
+    "reuseCount": 1,
+    "lastUsed": "2026-08-20T00:00:00.000Z"
+  }
+}

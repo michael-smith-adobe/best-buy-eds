@@ -1,0 +1,38 @@
+/*
+ * brand.css — Best Buy design tokens
+ * Extracted from https://www.bestbuy.com/top-deals
+ *
+ * Note: Best Buy's brand face is the proprietary "Human BBY Digital" (not
+ * publicly hosted on Adobe Fonts or Google Fonts). We reproduce the site's
+ * exact fallback stack so type metrics match closely on machines without it.
+ */
+:root {
+  /* font families (source fallback stacks) */
+  --heading-font-family: "Human BBY Digital", "Human Fallback", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen, ubuntu, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  --body-font-family: "Human BBY Digital", "Human Fallback", arial, helvetica, sans-serif;
+
+  /* core colors */
+  --background-color: #fff;
+  --text-color: #040c13;                  /* rgb(4, 12, 19) — near-black brand ink */
+  --link-color: #0046be;                  /* Best Buy blue */
+  --link-hover-color: #00308a;            /* darker blue (hover) */
+
+  /* brand accents */
+  --brand-blue: #0046be;
+  --brand-blue-dark: #00308a;
+  --brand-yellow: #fff200;                /* rgb(255, 242, 0) — sale/anniversary accent */
+  --brand-ink: #040c13;
+  --surface-subdued: #f0f2f4;             /* light grey block surface */
+
+  /* spacing */
+  --section-padding: 0;
+  --nav-height: 60px;
+
+  /* heading sizes (desktop, from source computed values) */
+  --heading-size-xxl: 24px;               /* h1 */
+  --heading-size-xl: 20px;                /* h2 */
+  --heading-size-l: 14px;                 /* h3 */
+  --heading-size-m: 20px;
+  --heading-size-s: 18px;
+  --heading-size-xs: 16px;
+}

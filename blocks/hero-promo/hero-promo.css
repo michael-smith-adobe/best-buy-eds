@@ -1,0 +1,105 @@
+/* hero-promo — "60th Anniversary Sale" promotional banner
+ * Values extracted from source computed styles: bestbuy.com/top-deals
+ * (div[data-testid="hero-banner"], data-hero-variant="banner")
+ *
+ * DOM (from top-deals.plain.html, after EDS decoration):
+ *   .hero-promo
+ *     > div        (row 1)  > div  (cell) > p > picture > img   [sale logo]
+ *     > div        (row 2)  > div  (cell) > h1 + p + p + p      [text]
+ */
+
+.hero-promo {
+  /* teal/blue diagonal gradient from source inline .hero-v2-bg-gradient */
+  background-image: linear-gradient(135deg, var(--brand-blue) 40%, #0089be 65%, #00c9ba 100%);
+  border-radius: 16px;
+  color: #fff;
+  padding: 32px 24px;
+  overflow: hidden;
+}
+
+/* rows stack on mobile */
+.hero-promo > div {
+  display: flex;
+  flex-direction: column;
+}
+
+/* cells */
+.hero-promo > div > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* --- Row 1: sale logo image --- */
+.hero-promo > div:first-child > div {
+  align-items: flex-start;
+}
+
+.hero-promo picture {
+  display: block;
+  line-height: 0;
+}
+
+.hero-promo img {
+  width: 100%;
+  max-width: 400px;   /* source logo rendered 400x150 */
+  height: auto;
+  object-fit: contain;
+}
+
+/* --- Row 2: text block --- */
+.hero-promo h1 {
+  margin: 0;
+  font-family: var(--heading-font-family);
+  font-size: 28px;
+  line-height: 1.05;
+  font-weight: 600;
+  color: #fff;
+  text-transform: none;
+}
+
+/* rewards line (1st paragraph) */
+.hero-promo > div:last-child p:nth-of-type(1) {
+  margin: 12px 0 0;
+  font-size: var(--body-font-size-m);   /* 17px */
+  font-weight: 400;
+  color: #fff;
+}
+
+/* "Ends Sunday" (2nd paragraph) */
+.hero-promo > div:last-child p:nth-of-type(2) {
+  margin: 8px 0 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--brand-yellow);
+}
+
+/* disclaimer (3rd paragraph) */
+.hero-promo > div:last-child p:nth-of-type(3) {
+  margin: 12px 0 0;
+  font-size: 11px;
+  font-weight: 400;
+  color: #fff;
+}
+
+/* --- Desktop: two-column (logo | text) --- */
+@media (width >= 900px) {
+  .hero-promo {
+    display: grid;
+    grid-template-columns: minmax(0, 460px) 1fr;
+    align-items: center;
+    column-gap: 48px;
+    padding: 40px 48px;
+    min-height: 302px;
+  }
+
+  .hero-promo > div:first-child > div {
+    align-items: center;
+  }
+
+  .hero-promo h1 {
+    font-size: 35px;
+    line-height: 33px;
+    max-width: 720px;
+  }
+}

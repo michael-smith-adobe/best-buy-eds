@@ -1,0 +1,108 @@
+/* cards-category — "Shop deals by category" horizontal-scroll tiles */
+
+/* Values extracted from bestbuy.com/top-deals computed styles. */
+
+/* Row = horizontal scroller (flex row, tiles do NOT wrap to a grid) */
+.cards-category > ul {
+  list-style: none;
+  margin: 0;
+  padding: 4px 0;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 16px;                 /* source li margin-right: 16px */
+  overflow: auto hidden;
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Tile */
+.cards-category > ul > li {
+  flex: 0 0 auto;
+  width: 120px;              /* mobile tile; desktop bumps to source 159px */
+  border: 0;
+  background: none;
+  scroll-snap-align: start;
+  text-align: center;
+}
+
+/* Image cell = circular icon */
+.cards-category .cards-category-card-image {
+  margin: 0;
+  line-height: 0;
+}
+
+.cards-category .cards-category-card-image p {
+  margin: 0;
+}
+
+.cards-category .cards-category-card-image picture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: var(--surface-subdued);   /* #f0f2f4 grey circle */
+  margin: 0 auto 8px;        /* source image-wrapper margin-bottom: 8px */
+}
+
+.cards-category .cards-category-card-image img {
+  width: 70%;                /* source img 111/159 ≈ 0.698 of the circle */
+  height: 70%;
+  object-fit: contain;
+  border-radius: 0;
+}
+
+/* Label cell */
+.cards-category .cards-category-card-body {
+  margin: 0;
+}
+
+.cards-category .cards-category-card-body p {
+  margin: 0;
+  font-family: var(--body-font-family);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  text-align: center;
+  color: var(--text-color);  /* rgb(4, 12, 19) */
+}
+
+/* Label link — plain text link, defeat EDS button auto-decoration */
+.cards-category .cards-category-card-body a,
+main .cards-category a.button:any-link {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  color: var(--text-color);
+  font: inherit;
+  text-decoration: none;
+  white-space: normal;
+}
+
+.cards-category .cards-category-card-body a:hover,
+main .cards-category a.button:any-link:hover {
+  background: none;
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+/* Desktop — match source tile/circle size (159px) */
+@media (width >= 900px) {
+  .cards-category > ul > li {
+    width: 159px;
+  }
+
+  .cards-category .cards-category-card-image picture {
+    width: 159px;
+    height: 159px;
+  }
+
+  .cards-category .cards-category-card-body p {
+    margin-top: 0;
+  }
+}

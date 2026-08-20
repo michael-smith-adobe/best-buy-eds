@@ -1,0 +1,101 @@
+{
+  "metadata": {
+    "projectType": "xwalk"
+  },
+  "templates": [
+    {
+      "name": "top-deals",
+      "urls": [
+        "https://www.bestbuy.com/top-deals"
+      ],
+      "coverageGaps": [],
+      "description": "Best Buy Top Deals landing page (partial scope): Top Deals H1 with intro copy, promotional hero banner, 'Shop deals by category' carousel, 'Featured deals' section (promo tiles + product carousel), and a Sponsored ad banner. Scope stops before the 'Deals for every budget' section.",
+      "blocks": [
+        {
+          "name": "hero-promo",
+          "instances": [
+            "body > main.container-v3 > div.relative.overflow-hidden:nth-of-type(2)"
+          ]
+        },
+        {
+          "name": "cards-category",
+          "instances": [
+            "body > main.container-v3 > div.deals-by-categories"
+          ]
+        },
+        {
+          "name": "cards-offer",
+          "instances": [
+            "body > main.container-v3 > div.relative.overflow-hidden:nth-of-type(4) div.grid.gap-200.mx-200"
+          ]
+        },
+        {
+          "name": "cards-product",
+          "instances": [
+            "body > main.container-v3 > div.relative.overflow-hidden:nth-of-type(4) div.pl-flex-carousel-container.deals-carousel"
+          ]
+        },
+        {
+          "name": "hero-sponsored",
+          "instances": [
+            "body > main.container-v3 div.display-ad-wrapper:has(.custom-leaderboard)",
+            "body > main.container-v3 > div:has(> .display-ad-wrapper .custom-leaderboard)"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "rc7",
+          "name": "top-deals-title",
+          "selector": "body > main.container-v3 > h1.text-style-title-md-500",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            "body > main.container-v3 > h1.text-style-title-md-500"
+          ]
+        },
+        {
+          "id": "rc8",
+          "name": "hero-promo-banner",
+          "selector": "body > main.container-v3 > div.relative.overflow-hidden:nth-of-type(2)",
+          "style": null,
+          "blocks": [
+            "hero-promo"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "rc9",
+          "name": "shop-by-category",
+          "selector": "body > main.container-v3 > div.deals-by-categories",
+          "style": null,
+          "blocks": [
+            "cards-category"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "rc10",
+          "name": "featured-deals",
+          "selector": "body > main.container-v3 > div.relative.overflow-hidden:nth-of-type(4)",
+          "style": null,
+          "blocks": [
+            "cards-offer",
+            "cards-product"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "sponsored",
+          "name": "sponsored-banner",
+          "selector": "body > main.container-v3 div.display-ad-wrapper:has(.custom-leaderboard)",
+          "style": null,
+          "blocks": [
+            "hero-sponsored"
+          ],
+          "defaultContent": []
+        }
+      ]
+    }
+  ]
+}

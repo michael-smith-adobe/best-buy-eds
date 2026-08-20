@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "url": "https://www.bestbuy.com/top-deals",
+  "path": "top-deals",
+  "timestamp": "2026-08-20T15:09:38.569Z",
+  "title": "Top Deals & Featured Offers on Electronics - Best Buy",
+  "template": "top-deals",
+  "blocks": [
+    "hero-promo",
+    "cards-category",
+    "cards-offer",
+    "cards-product",
+    "hero-sponsored",
+    "hero-sponsored"
+  ]
+}

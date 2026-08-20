@@ -34,6 +34,24 @@
     ]
   },
   {
+    "id": "cards-category",
+    "components": [
+      "card"
+    ]
+  },
+  {
+    "id": "cards-offer",
+    "components": [
+      "card"
+    ]
+  },
+  {
+    "id": "cards-product",
+    "components": [
+      "card"
+    ]
+  },
+  {
     "id": "cards",
     "components": [
       "card"

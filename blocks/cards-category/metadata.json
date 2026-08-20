@@ -1,0 +1,38 @@
+{
+  "variantName": "cards-category",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-08-20T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.bestbuy.com/top-deals",
+    "originPage": "Best Buy Top Deals landing page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "category-navigation",
+    "imagePattern": "icon"
+  },
+  "contentPattern": {
+    "structure": "repeating tiles: round icon image + linked short label",
+    "buttonCount": 0,
+    "imageCount": 25
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "'shop by category' navigation tile rows",
+      "horizontally scrollable icon + label link tiles",
+      "category / department shortcut grids"
+    ],
+    "notSuitableFor": [
+      "product deal cards with price/badge",
+      "large promotional offer tiles with CTA buttons"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/top-deals"],
+    "reuseCount": 1,
+    "lastUsed": "2026-08-20T00:00:00.000Z"
+  }
+}

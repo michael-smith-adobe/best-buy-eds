@@ -1,0 +1,38 @@
+{
+  "variantName": "cards-offer",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-08-20T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.bestbuy.com/top-deals",
+    "originPage": "Best Buy Top Deals landing page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "accent",
+    "density": "wide",
+    "purpose": "promo-offer",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "repeating tiles: offer headline + image + body copy + 'Shop now' CTA link",
+    "buttonCount": 4,
+    "imageCount": 4
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "featured promotional offer tiles on colored/gradient backgrounds",
+      "marketing 'deal' tiles with a bold offer headline + CTA button",
+      "curated promo highlight rows"
+    ],
+    "notSuitableFor": [
+      "plain category navigation icon tiles",
+      "priced product cards with % off badge"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/top-deals"],
+    "reuseCount": 1,
+    "lastUsed": "2026-08-20T00:00:00.000Z"
+  }
+}
